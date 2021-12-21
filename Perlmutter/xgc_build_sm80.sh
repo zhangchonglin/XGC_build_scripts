@@ -43,8 +43,8 @@ cmake $xgc_src_root \
       -DRHO_PARA_DERIVS_CPU=ON \
       -DUSE_SYSTEM_PSPLINE=ON -DUSE_SYSTEM_CAMTIMERS=ON \
       -DPSPLINE_INCLUDE_DIRS=$pspline_install_root/include \
-      -DPSPLINE_LIBRARIES=$pspline_install_root/lib \
+      -DPSPLINE_LIBRARIES=$pspline_install_root/lib/libpspline.a \
       -DCAMTIMERS_INCLUDE_DIRS=$camtimers_install_root \
-      -DCAMTIMERS_LIBRARIES=$camtimers_install_root
+      -DCAMTIMERS_LIBRARIES=$camtimers_install_root/libtimers.a
 
 make VERBOSE=1 xgc-es-cpp
