@@ -17,6 +17,12 @@ export kokkos_install_root=$installroot/kokkos/install
 export cabana_src_root=$srcroot/cabana
 export cabana_install_root=$installroot/cabana/install
 
+# camtimers
+export camtimers_src_root=$srcroot/XGC-Devel/libs/camtimers
+export camtimers_install_root=$camtimers_src_root
+# pspline
+export pspline_install_root=$installroot/pspline/install
+
 # xgc
 export xgc_src_root=$srcroot/XGC-Devel
 export xgc_install_root=$installroot/xgc/install
@@ -34,6 +40,11 @@ cd xgc/build
 cmake $xgc_src_root \
       -DCMAKE_BUILD_TYPE=Debug -DXGC1=ON \
       -DNEW_FLX_AIF=ON -DDELTAF_CONV=ON -DRHO_PARA_DERIVS=ON \
-      -DRHO_PARA_DERIVS_CPU=ON
+      -DRHO_PARA_DERIVS_CPU=ON \
+      -DUSE_SYSTEM_PSPLINE=ON -DUSE_SYSTEM_CAMTIMERS=ON \
+      -DPSPLINE_INCLUDE_DIRS=$pspline_install_root/include \
+      -DPSPLINE_LIBRARIES=$pspline_install_root/lib \
+      -DCAMTIMERS_INCLUDE_DIRS=$camtimers_install_root \
+      -DCAMTIMERS_LIBRARIES=$camtimers_install_root
 
 make VERBOSE=1 xgc-es-cpp
