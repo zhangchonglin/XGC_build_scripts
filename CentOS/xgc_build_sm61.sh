@@ -33,10 +33,6 @@ cd xgc/build
 export XGC_PLATFORM=centos7
 cmake $xgc_src_root \
       -DCMAKE_BUILD_TYPE=Debug -DXGC1=ON \
-      -DDELTAF_CONV=ON \
-      -DPSPLINE_INCLUDE_DIRS=$pspline_install_root/include \
-      -DPSPLINE_LIBRARIES=$pspline_install_root/lib/libpspline.a \
-      -DCAMTIMERS_INCLUDE_DIRS=$camtimers_install_root \
-      -DCAMTIMERS_LIBRARIES=$camtimers_install_root/libtimers.a
+      -DDELTAF_CONV=ON
 
 make -j4 xgc-es-cpp xgc-es-cpp-gpu
