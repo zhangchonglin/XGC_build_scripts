@@ -1,6 +1,6 @@
-# XGC build scripts for CentOS 7
+## XGC build scripts for CentOS 7
 
-Configure and building scripts includes:
+### Configure and building scripts includes:
 ```
 - PETSc 3.16.2: https://gitlab.com/petsc/petsc
 - ADIOS2 v2.7.1.436: https://github.com/ornladios/ADIOS2.git
@@ -12,9 +12,9 @@ Configure and building scripts includes:
 - pspline from XGC source code
 - XGC master branch: https://github.com/PrincetonUniversity/XGC-Devel.git, at commit: 6b8bb72
 ```
-using `cuda/10.2.89`, `gcc 7.3.1`, `mpich 3.3.2` by loading:
+using `cuda/10.2.89`, `gcc 7.3.1`, `mpich 3.3.2`.
 
-Build the libraries in order:
+### Build the libraries in order:
 ```
  - PETSc
  - ADIOS2
