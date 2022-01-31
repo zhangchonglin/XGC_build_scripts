@@ -2,9 +2,9 @@
 
 ### Configure and building scripts includes:
 ```
-- PETSc 3.16.2: https://gitlab.com/petsc/petsc
+- PETSc 3.16.2: https://gitlab.com/petsc/petsc.git
 - ADIOS2 v2.7.1.436: https://github.com/ornladios/ADIOS2.git
-- kokkos master branch: https://github.com/kokkos/kokkos, at commit: 2834f94
+- kokkos master branch: https://github.com/kokkos/kokkos.git, at commit: 2834f94
 - cabana master branch: https://github.com/ECP-copa/Cabana.git, at commit: 191b358
 - FFTW 3.3.10
 - LAPACK 3.10.0
