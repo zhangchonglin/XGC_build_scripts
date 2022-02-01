@@ -35,10 +35,12 @@ cd xgc/build
 
 export XGC_PLATFORM=centos8
 cmake $xgc_src_root \
-      -DCMAKE_BUILD_TYPE=Debug -DXGC1=ON \
+      -DCMAKE_BUILD_TYPE=Debug -DDELTAF_CONV=ON \
       -DCMAKE_Fortran_COMPILER="gfortran" \
       -DCMAKE_CXX_COMPILER="g++" \
       -DCMAKE_C_COMPILER="gcc" \
-      -DDELTAF_CONV=ON
+      -DCMAKE_C_FLAGS="-fopenmp" \
+      -DCMAKE_CXX_FLAGS="-fopenmp" \
+      -DCMAKE_Fortran_FLAGS="-fopenmp"
 
 make -j4 xgc-es-cpp xgc-es-cpp-gpu
