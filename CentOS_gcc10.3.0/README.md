@@ -1,4 +1,4 @@
-## XGC build scripts for CentOS 7
+## XGC build scripts for CentOS 8 stream
 
 ### Configure and building scripts includes:
 ```
@@ -12,7 +12,7 @@
 - pspline from XGC source code
 - XGC master branch: https://github.com/PrincetonUniversity/XGC-Devel.git, at commit: 6b8bb72
 ```
-using `cuda/11.4.2`, `gcc 10.3.0`, `mpich 3.4.1`.
+using `cuda/11.4.152`, `gcc 10.3.0`, `mpich 3.4.1`.
 
 ### Build the libraries in order:
 ```
@@ -39,11 +39,11 @@ using `cuda/11.4.2`, `gcc 10.3.0`, `mpich 3.4.1`.
 ```
 
 (1) To build `PETSc`, do the following in the `PETSc` source directory:
-- `source setupEnvGcc_petsc_centos7.sh`;
-- run `./arch-centos7.py` to configure;
+- `source setupEnvGcc_petsc_centos8.sh`;
+- run `./arch-centos8.py` to configure;
 - make/build following the output from `PETSc` configuration, something like this:
   ```
-   make PETSC_DIR=... PETSC_ARCH=arch-centos7 all
+   make PETSC_DIR=... PETSC_ARCH=arch-centos8 all
   ```
 
 (2) create a new folder called `install` within the `xgc_install` directory: `xgc_install/install`.
@@ -55,7 +55,8 @@ using `cuda/11.4.2`, `gcc 10.3.0`, `mpich 3.4.1`.
 ```
 Note:
 - the current build script works for Nvidia Pascal architecture;
-- for a different GPU, the architecture name and `sm number` need to be modified accordingly.
+- for a different GPU, the architecture name and `sm number` need to be modified accordingly;
+- build `camtimer` in the source directory using `make`.
 
 (4) the final `XGC` binary/binaries will be in the following location: `xgc_install/install/xgc/build/bin/`.
 
