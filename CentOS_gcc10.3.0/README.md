@@ -2,7 +2,7 @@
 
 ### Configure and building scripts includes:
 ```
-- PETSc 3.16.2: https://gitlab.com/petsc/petsc.git
+- PETSc 3.15.2: https://gitlab.com/petsc/petsc.git
 - ADIOS2 v2.7.1.436: https://github.com/ornladios/ADIOS2.git
 - kokkos master branch: https://github.com/kokkos/kokkos.git, at commit: 2834f94
 - cabana master branch: https://github.com/ECP-copa/Cabana.git, at commit: 191b358
@@ -13,6 +13,8 @@
 - XGC master branch: https://github.com/PrincetonUniversity/XGC-Devel.git, at commit: 6b8bb72
 ```
 using `cuda/11.4.152`, `gcc 10.3.0`, `mpich 3.4.1`.
+
+Note: `PETSc 3.16.x` is having some compatibility issue with XGC. To avoid potential crash, `PETSc 3.15.2` should be used. 
 
 ### Build the libraries in order:
 ```
