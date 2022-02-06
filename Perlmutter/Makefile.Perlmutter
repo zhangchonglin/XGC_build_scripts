@@ -3,7 +3,7 @@
 
 CPPDEF    := -DLINUX -DFORTRANUNDERSCORE -DHAVE_MPI  -DHAVE_NANOTIME -DBIT64
 
-FC := ftn  -fopenmp
+FC := ftn  -fopenmp -fallow-argument-mismatch
 CC := cc -fopenmp
 FFLAGS    := $(CPPDEF)
 CFLAGS    := $(CPPDEF)
