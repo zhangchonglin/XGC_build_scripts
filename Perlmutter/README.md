@@ -12,6 +12,8 @@
 ```
 using `cuda/11.4.2`, `gcc 10.3.0`, `cray-mpich 8.1.12`.
 
+Note: `PETSc 3.16.x` is having compatibility issue with XGC. To avoid potential crash, `PETSc 3.15.2` is used. 
+
 ### Build the libraries in order:
 ```
  - PETSc
