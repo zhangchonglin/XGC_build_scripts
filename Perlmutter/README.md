@@ -35,8 +35,8 @@ Note: `PETSc 3.16.x` is having compatibility issue with XGC. To avoid potential 
 ```
 
 (1) To build `PETSc`, do the following in the `PETSc` source directory:
-- `source setupEnvGcc_petsc_centos8.sh`;
-- run `./arch-centos8.py` to configure;
+- `source setupEnvGcc_petsc_cuda11.4.2.sh`;
+- run `./arch_perlmutter.py` to configure;
 - make/build following the output from `PETSc` configuration, something like this:
   ```
    make PETSC_DIR=... PETSC_ARCH=arch_perlmutter all
@@ -46,11 +46,11 @@ Note: `PETSc 3.16.x` is having compatibility issue with XGC. To avoid potential 
 
 (3) copy the build script to the `install` folder and use the build script to build each library, for example:
 ```
-./adios2_build_sm61.sh
-./kokkos_build_sm61.sh
+.adios2_build_sm80.sh
+./kokkos_build_sm80.sh
 ```
 Note:
-- the current build script works for Nvidia Tesla architecture;
+- the current build script works for Nvidia Ampere architecture;
 - for a different GPU, the architecture name and `sm number` need to be modified accordingly;
 - build `camtimer` in the source directory using `make -f MAKEFILE/Makefile.Perlmutter`.
 
