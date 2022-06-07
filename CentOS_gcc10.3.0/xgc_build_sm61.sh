@@ -33,7 +33,7 @@ cd $installroot
 mkdir -p xgc/build
 cd xgc/build
 
-export XGC_PLATFORM=centos8
+export XGC_PLATFORM=centos10
 cmake $xgc_src_root \
       -DCMAKE_BUILD_TYPE=Debug -DDELTAF_CONV=ON \
       -DCMAKE_Fortran_COMPILER="gfortran" \
