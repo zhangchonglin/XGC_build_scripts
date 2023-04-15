@@ -32,7 +32,7 @@ cd $installroot
 mkdir -p xgc/build
 cd xgc/build
 
-export XGC_PLATFORM=perlmutter_gcc10
+export XGC_PLATFORM=perlmutter_gcc11
 cmake $xgc_src_root \
       -DCMAKE_BUILD_TYPE=RelWithDebInfo \
       -DDELTAF_CONV=ON \
