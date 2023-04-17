@@ -50,7 +50,8 @@ using `cuda/11.7`, `gcc 11.2.0`, `cray-mpich 8.1.25`.
 Note:
 - the current build script works for Nvidia Ampere architecture;
 - for a different GPU, the architecture name and `sm number` need to be modified accordingly;
-- build `camtimer` in the source directory using `make -f MAKEFILE/Makefile.Perlmutter`.
+- build `camtimer` in the source directory using `make -f MAKEFILE/Makefile.Perlmutter`;
+- Note: check if need to build `pspline` and `camtimer` separately; these may already be built during `xgc` build.
 
 (4) the final `XGC` binary/binaries will be in the following location: `xgc_install/install/xgc/build/bin/`.
 
